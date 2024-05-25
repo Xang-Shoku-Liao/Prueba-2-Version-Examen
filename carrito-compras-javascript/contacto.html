@@ -9,6 +9,8 @@
 		/>
 		<title>Tienda</title>
 		<link rel="stylesheet" href="styles.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 	</head>
     <body>
         <header>
@@ -24,17 +26,19 @@
         <div class="container">
             <h1>Contactenos</h1>
             <form id="registroForm">
-                <label for="Nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre"><br>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" pattern="[A-Za-z]+" title="Solo se permiten letras"><br>
+
             
                 <label for="Apellidos">Apellidos:</label>
-                <input type="text" id="Apellidos" name="Apellidos"><br>
+                <input type="text" id="Apellidos" name="Apellidos" pattern="[A-Za-z]+" title="Solo se permiten letras"><br>
+
             
                 <label for="Correo">Correo:</label>
                 <input type="text" id="correo" name="correo"><br>
             
                 <label for="edad">Edad:</label>
-                <input type="number" id="edad" name="edad"><br>
+                <input type="number" id="edad" name="edad" min="0"><br>
             
                 <label for="genero">Género:</label>
                 <select id="genero" name="genero">
@@ -45,9 +49,11 @@
                 </select><br>
             
                 <label for="celular">Celular:</label>
-                <input type="text" id="celular" name="celular"><br>
+                <input type="text" id="celular" name="celular" pattern="[0-9]+" title="Solo se permiten números"><br>
+
             
                 <button type="submit">Registrar</button>
             </form>
         </div>
+        <script src="validaciones.js"></script>
     </body
